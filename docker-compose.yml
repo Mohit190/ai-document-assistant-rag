@@ -1,0 +1,13 @@
+services:
+  ai-document-assistant:
+    build: .
+    container_name: ai-document-assistant
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+
+    env_file:
+      - .env
